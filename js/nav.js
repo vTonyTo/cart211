@@ -1,6 +1,6 @@
 $('.main-nav ul li').hover(function() {
-  $('.main-nav ul li').removeClass('active');
-  $(this).addClass('active');
+  $('.main-nav ul li').addClass('active');
+  $(this).removeClass('active');
 });
 
 /*
