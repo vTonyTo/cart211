@@ -1,0 +1,516 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+html {
+  height: 100%;
+  background: rgb(0,11,94);
+  background: linear-gradient(304deg, rgba(0,11,94,1) 0%, rgba(0,124,230,1) 100%);
+}
+
+body {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/*******
+NAV
+*******/
+
+.content {
+  position: relative;
+}
+.content .caption {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 150px;
+}
+.content .caption h1 {
+  line-height: 60px;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+}
+.content .caption h1:first-of-type {
+  letter-spacing: 0;
+}
+.content .caption span {
+  font-weight: 100;
+  display: block;
+  letter-spacing: .4em;
+  font-size: 16px;
+}
+.content nav.main-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.content nav.main-nav ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+.content nav.main-nav ul li {
+  background: #272e38;
+  flex-grow: 1;
+  text-align: center;
+  padding-bottom: 20px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 0;
+  transition: all .25s ease;
+  position: relative;
+  border-right: 1px solid #606770;
+  box-shadow: 0 5px 0 0 #1a1f27;
+}
+.content nav.main-nav ul li:last-of-type {
+  border-right: none;
+}
+.content nav.main-nav ul li:hover {
+  margin-top: -5px;
+  cursor: pointer;
+}
+.content nav.main-nav ul li.active {
+  margin-top: -50px;
+  position: relative;
+  box-shadow: -1px 0 0 0 #606770;
+}
+.content nav.main-nav ul li.active:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 20px;
+  border-color: transparent transparent #272e38 transparent;
+  margin: auto;
+  top: -20px;
+  left: 0;
+  right: 0;
+}
+.content nav.main-nav ul li .icon {
+  margin-bottom: 30px;
+}
+.content nav.main-nav ul li .menuicon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: #606770;
+  transition: all .25s ease;
+}
+.content nav.main-nav ul li .menuicon:hover {
+  color: #fff;
+}
+.content nav.main-nav ul li .ul-menu {
+  position: absolute;
+  bottom: -150%;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: #1a1f27;
+  display: block;
+  padding: 10px 0;
+  transition: all .25s ease;
+}
+.content nav.main-nav ul li .ul-menu:hover {
+  cursor: default;
+}
+.content nav.main-nav ul li .ul-menu .ul-menu-close {
+  width: 20px;
+  height: 20px;
+  color: #606770;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all .25s ease;
+}
+.content nav.main-nav ul li .ul-menu .ul-menu-close:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.content nav.main-nav ul li .ul-menu p {
+  margin-bottom: 20px;
+}
+.content nav.main-nav ul li .ul-menu ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+}
+.content nav.main-nav ul li .ul-menu ul li {
+  border-bottom: none;
+  background: transparent;
+  flex-grow: 1;
+  text-align: center;
+  padding-bottom: 0;
+  height: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0;
+  transition: all .25s ease;
+  position: relative;
+  border-right: none;
+  box-shadow: none;
+  padding: 5px 0;
+}
+.content nav.main-nav ul li .ul-menu ul li:nth-of-type(2) {
+  border-left: 1px solid #606770;
+  border-right: 1px solid #606770;
+}
+.content nav.main-nav ul li .ul-menu ul li:hover {
+  background: #272e38;
+}
+.content nav.main-nav ul li .ul-menu input[type="range"] {
+  -webkit-appearance: none !important;
+  width: 60%;
+  height: 5px;
+  background: #fff;
+  border: 1px solid #606770;
+  border-radius: 50%;
+  margin: auto;
+  transition: all 0.3s ease;
+  outline: none;
+  display: block;
+  margin-bottom: 5px;
+}
+.content nav.main-nav ul li .ul-menu input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 20px;
+  height: 20px;
+  background: #515f74;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+.content nav.main-nav ul li .ul-menu output {
+  display: block;
+  marign-bottom: 10px;
+}
+.content nav.main-nav ul li .ul-menu button {
+  height: 20px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  background: #3e87ec;
+  color: #fff;
+  font-size: 14px;
+}
+
+/********************************
+Background gradients & images
+********************************/
+.content nav.main-nav ul li.active.button-1 {
+  background: #00fe9e;
+  /* Old browsers */
+  background: url("http://www.tums-mc.de/img/points1.png"), -moz-linear-gradient(-45deg, #00fe9e 30%, #acff3d 70%);
+  /* FF3.6+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-gradient(linear, left top, right bottom, color-stop(30%, #00fe9e), color-stop(70%, #acff3d));
+  /* Chrome,Safari4+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-linear-gradient(-45deg, #00fe9e 30%, #acff3d 70%);
+  /* Chrome10+,Safari5.1+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -o-linear-gradient(-45deg, #00fe9e 30%, #acff3d 70%);
+  /* Opera 11.10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -ms-linear-gradient(-45deg, #00fe9e 30%, #acff3d 70%);
+  /* IE10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), linear-gradient(135deg, #00fe9e 30%, #acff3d 70%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fe9e', endColorstr='#acff3d',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.content nav.main-nav ul li.active.button-2 {
+  background: #bbc0f7;
+  /* Old browsers */
+  background-image: url("http://www.tums-mc.de/img/points1.png"), -moz-linear-gradient(-45deg, #bbc0f7 30%, #2afcef 70%);
+  /* FF3.6+ */
+  background-image: url("http://www.tums-mc.de/img/points1.png"), -webkit-gradient(linear, left top, right bottom, color-stop(30%, #bbc0f7), color-stop(70%, #2afcef));
+  /* Chrome,Safari4+ */
+  background-image: url("http://www.tums-mc.de/img/points1.png"), -webkit-linear-gradient(-45deg, #bbc0f7 30%, #2afcef 70%);
+  /* Chrome10+,Safari5.1+ */
+  background-image: url("http://www.tums-mc.de/img/points1.png"), -o-linear-gradient(-45deg, #bbc0f7 30%, #2afcef 70%);
+  /* Opera 11.10+ */
+  background-image: url("http://www.tums-mc.de/img/points1.png"), -ms-linear-gradient(-45deg, #bbc0f7 30%, #2afcef 70%);
+  /* IE10+ */
+  background-image: url("http://www.tums-mc.de/img/points1.png"), linear-gradient(135deg, #bbc0f7 30%, #2afcef 70%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbc0f7', endColorstr='#2afcef',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.content nav.main-nav ul li.active.button-3 {
+  background: #e535e2;
+  /* Old browsers */
+  background: url("http://www.tums-mc.de/img/points1.png"), -moz-linear-gradient(-45deg, #e535e2 30%, #fe665b 70%);
+  /* FF3.6+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-gradient(linear, left top, right bottom, color-stop(30%, #e535e2), color-stop(70%, #fe665b));
+  /* Chrome,Safari4+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-linear-gradient(-45deg, #e535e2 30%, #fe665b 70%);
+  /* Chrome10+,Safari5.1+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -o-linear-gradient(-45deg, #e535e2 30%, #fe665b 70%);
+  /* Opera 11.10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -ms-linear-gradient(-45deg, #e535e2 30%, #fe665b 70%);
+  /* IE10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), linear-gradient(135deg, #e535e2 30%, #fe665b 70%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e535e2', endColorstr='#fe665b',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.content nav.main-nav ul li.active.button-4 {
+  background: #1bc3ff;
+  /* Old browsers */
+  background: url("http://www.tums-mc.de/img/points1.png"), -moz-linear-gradient(-45deg, #1bc3ff 30%, #48ded2 70%);
+  /* FF3.6+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-gradient(linear, left top, right bottom, color-stop(30%, #1bc3ff), color-stop(70%, #48ded2));
+  /* Chrome,Safari4+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-linear-gradient(-45deg, #1bc3ff 30%, #48ded2 70%);
+  /* Chrome10+,Safari5.1+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -o-linear-gradient(-45deg, #1bc3ff 30%, #48ded2 70%);
+  /* Opera 11.10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -ms-linear-gradient(-45deg, #1bc3ff 30%, #48ded2 70%);
+  /* IE10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), linear-gradient(135deg, #1bc3ff 30%, #48ded2 70%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1bc3ff', endColorstr='#48ded2',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.content nav.main-nav ul li.active.button-5 {
+  background: #fecd32;
+  /* Old browsers */
+  background: url("http://www.tums-mc.de/img/points1.png"), -moz-linear-gradient(-45deg, #fecd32 30%, #f75e73 70%);
+  /* FF3.6+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-gradient(linear, left top, right bottom, color-stop(30%, #fecd32), color-stop(70%, #f75e73));
+  /* Chrome,Safari4+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -webkit-linear-gradient(-45deg, #fecd32 30%, #f75e73 70%);
+  /* Chrome10+,Safari5.1+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -o-linear-gradient(-45deg, #fecd32 30%, #f75e73 70%);
+  /* Opera 11.10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), -ms-linear-gradient(-45deg, #fecd32 30%, #f75e73 70%);
+  /* IE10+ */
+  background: url("http://www.tums-mc.de/img/points1.png"), linear-gradient(135deg, #fecd32 30%, #f75e73 70%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fecd32', endColorstr='#f75e73',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
+/*
+body{
+	color:#4a5b65;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size:14px;
+	line-height: 20px;
+}
+*/
+
+*:focus{outline:none !important;}
+
+
+/*********
+ TO DO LIST
+ *********/
+.tdl-holder{
+	margin: 50px auto;
+	width: 300px;
+}
+
+.tdl-holder h2{
+	background-color: #de3f53;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color:#fff;
+	font-family:"Roboto", Arial, sans-serif;
+	font-size:16px;
+	font-weight: 400;
+	line-height: 56px;
+	padding-left: 15px;
+	margin:0;
+}
+
+.tdl-holder ul, .tdl-holder li {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.tdl-holder li{
+	background-color: #262e4c;
+	border-bottom:1px solid #1c2340;
+	color: #b1b2c9;
+}
+
+.tdl-holder li span{
+	margin-left:30px;
+	-webkit-transition: all .2s linear;
+	   -moz-transition: all .2s linear;
+	     -o-transition: all .2s linear;
+		    transition: all .2s linear;
+}
+
+.tdl-holder label{
+	cursor:pointer;
+	display:block;
+	line-height: 56px;
+	padding: 0 15px;
+	position: relative;
+}
+
+.tdl-holder label:hover{
+	background-color: #2a3353;
+	color:#8284a3;
+}
+
+.tdl-holder label a{
+	background-color:#de3f53;
+	border-radius:50%;
+	color:#fff;
+	display:none;
+	float:right;
+	font-weight: bold;
+	line-height: normal;
+	height:16px;
+	margin-top: 20px;
+	text-align: center;
+	text-decoration: none;
+	width:16px;
+	-webkit-transition: all .2s linear;
+	   -moz-transition: all .2s linear;
+	     -o-transition: all .2s linear;
+		    transition: all .2s linear;
+}
+
+.tdl-holder label:hover a{
+	display: block;
+}
+
+.tdl-holder label a:hover{
+	background-color:#fff;
+	color:#de3f53;
+}
+
+.tdl-holder input[type="checkbox"]{
+	cursor: pointer;
+	opacity: 0;
+	position: absolute;
+}
+
+.tdl-holder input[type="checkbox"] + i{
+	background-color: #404a6e;
+	border-radius: 50%;
+	display: block;
+	height: 16px;
+	position: absolute;
+	top:20px;
+	width: 16px;
+	z-index: 1;
+}
+
+.tdl-holder input[type="checkbox"]:checked + i::after{
+	background-color: #6E6E96;
+	border-radius: 50%;
+	content: '';
+	display: block;
+	height:8px;
+	left:4px;
+	position: absolute;
+	top:4px;
+	width:8px;
+	z-index: 2;
+}
+
+.tdl-holder input[type="checkbox"]:checked ~ span{
+	color: #586186;
+	text-decoration: line-through;
+}
+
+.tdl-holder input[type="text"]{
+	background-color: #171d37;
+	border: none;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-shadow: inset 0 0 8px 0 #0e1329;
+	color: #464f72;
+	font-size:14px;
+	margin:0;
+	padding:20px 15px;
+	width:300px;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.tdl-holder input[type="text"]:hover{
+	color:#4c577f;
+}
+
+.tdl-holder input[type="text"]:focus{
+	color:#fff;
+}
+
+.tdl-holder ::-webkit-input-placeholder {color: #464f72;} /* WebKit browsers */
+.tdl-holder :-moz-placeholder 			{color: #464f72;} /* Mozilla Firefox 4 to 18 */
+.tdl-holder ::-moz-placeholder 			{color: #464f72;} /* Mozilla Firefox 19+ */
+.tdl-holder :-ms-input-placeholder 		{color: #464f72;} /* Internet Explorer 10+ */
+
+.tdl-holder li.remove{
+	-webkit-animation:collapseItem 300ms ease;
+	animation:collapseItem 300ms ease;
+	-webkit-transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+
+}
+
+.tdl-holder li.remove span{
+	color: #586186;
+	text-decoration: line-through;
+}
+
+@keyframes collapseItem {
+    0% 		{ -ms-transform: perspective(500px) rotateX(0deg);transform: perspective(500px) rotateX(0deg); 	}
+    100% 	{ -ms-transform: perspective(500px) rotateX(-90deg);transform: perspective(500px) rotateX(-90deg); }
+}
+
+@-webkit-keyframes collapseItem {
+    0% 		{ -webkit-transform: perspective(500px) rotateX(0deg); 	}
+    100% 	{ -webkit-transform: perspective(500px) rotateX(-90deg);}
+}
+
+/*********
+CHRISTMAS COUNTDOWN
+*********/
+
+.countdownContainer {
+  margin: 150px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #171d37;
+  border-radius: 5px;
+}
+
+.christmas {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.counter {
+  font-size: 4rem;
+}
