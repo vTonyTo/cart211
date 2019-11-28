@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
+
 * {
   margin: 0;
   padding: 0;
@@ -310,23 +312,11 @@ Background gradients & images
   /* IE6-9 fallback on horizontal gradient */
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
-/*
-body{
-	color:#4a5b65;
-	font-family: "Roboto", Arial, sans-serif;
-	font-size:14px;
-	line-height: 20px;
-}
-*/
-
-*:focus{outline:none !important;}
-
-
 /*********
  TO DO LIST
  *********/
+*:focus{outline:none !important;}
+
 .tdl-holder{
 	margin: 50px auto;
 	width: 300px;
@@ -360,9 +350,9 @@ body{
 .tdl-holder li span{
 	margin-left:30px;
 	-webkit-transition: all .2s linear;
-	   -moz-transition: all .2s linear;
-	     -o-transition: all .2s linear;
-		    transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
 }
 
 .tdl-holder label{
@@ -392,9 +382,9 @@ body{
 	text-decoration: none;
 	width:16px;
 	-webkit-transition: all .2s linear;
-	   -moz-transition: all .2s linear;
-	     -o-transition: all .2s linear;
-		    transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
 }
 
 .tdl-holder label:hover a{
